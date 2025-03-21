@@ -1,0 +1,15 @@
+<section>
+    <h2>Bem-vindo à Casa Machado</h2>
+    <p>Os melhores fios e cabos elétricos para você!</p>
+</section>
+
+<section>
+    <h3>Produtos em Destaque</h3>
+    {% for product in collections.all.products %}
+        <div>
+            <h4>{{ product.title }}</h4>
+            <p>{{ product.price | money }}</p>
+            <a href="{{ product.url }}">Ver Produto</a>
+        </div>
+    {% endfor %}
+</section>
